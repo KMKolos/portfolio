@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kristopher Kolos — Cybersecurity</title>
+  <meta name="description" content="Kristopher Kolos — Computer Information Systems student concentrating in cybersecurity, based in New York City. Projects, skills, and build log." />
+
+  <!-- Favicon (simple KK mark) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Social preview (shown when the link is shared on LinkedIn, iMessage, Slack, etc.)
+       We'll add the preview image (og:image) when the site goes live and has a real web address. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kristopher Kolos — Cybersecurity" />
+  <meta property="og:description" content="Computer Information Systems student concentrating in cybersecurity, based in New York City." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts: Fraunces (characterful serif for headlines) + Hanken Grotesk (warm, refined sans for body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ STICKY NAV ============ -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">KK<span class="nav__dot">.</span></a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__links">
+        <a href="#featured">Featured</a>
+        <a href="#work">Projects</a>
+        <a href="#about">About</a>
+        <a href="#now">Now</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Cybersecurity · New York City</p>
+        <h1 class="hero__headline">
+          Cybersecurity student focused on <em>defending the systems</em> people rely on.
+        </h1>
+        <p class="hero__sub">
+          I'm Kris Kolos — a Computer Information Systems student in New York City,
+          concentrating in cybersecurity with a minor in information technology. I care about
+          network defense, threat detection, and learning the tools real security teams use every day.
+        </p>
+        <p class="hero__status"><span class="hero__dot"></span> Open to Fall 2026 security internships</p>
+        <div class="hero__links">
+          <a class="btn btn--solid" href="https://www.linkedin.com/in/KKOLOS" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/KMKolos" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="mailto:kmkolos04@gmail.com">Email</a>
+          <a class="btn btn--ghost" href="resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+        </div>
+      </div>
+      <div class="hero__scroll">Scroll</div>
+    </section>
+
+    <!-- ============ CREDENTIALS STRIP (fast-credibility row) ============ -->
+    <section class="creds" aria-label="Credentials at a glance">
+      <div class="creds__inner">
+        <div class="creds__item">
+          <span class="creds__label">Certifications</span>
+          <span class="creds__value">CompTIA Security+ (in progress) · placeholder</span>
+        </div>
+        <div class="creds__item">
+          <span class="creds__label">Education</span>
+          <span class="creds__value">B.S. Computer Information Systems · placeholder</span>
+        </div>
+        <div class="creds__item">
+          <span class="creds__label">Focus</span>
+          <span class="creds__value">Defensive security · SOC · placeholder</span>
+        </div>
+        <div class="creds__item">
+          <span class="creds__label">Platforms</span>
+          <span class="creds__value">TryHackMe · HackTheBox · placeholder</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECT ============ -->
+    <section class="featured" id="featured">
+      <div class="section__head">
+        <span class="section__kicker">01 — Featured</span>
+        <h2 class="section__title">Featured Projects</h2>
+      </div>
+
+      <div class="featured__grid">
+        <div class="featured__text">
+          <h3 class="featured__name">Project Name</h3>
+          <p class="featured__tagline">One sentence on why this mattered and what changed because of it.</p>
+          <dl class="paps">
+            <div><dt>Problem</dt><dd>What was broken or missing. Placeholder text.</dd></div>
+            <div><dt>Approach</dt><dd>How you thought about it. Placeholder text.</dd></div>
+            <div><dt>What I built</dt><dd>The actual thing you made. Placeholder text.</dd></div>
+            <div><dt>Result</dt><dd>The outcome, ideally with a number. Placeholder text.</dd></div>
+          </dl>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+        </div>
+
+        <!-- Interactive element slot — we'll replace this with your signature piece -->
+        <div class="featured__interactive" id="signature-slot">
+          <div class="demo">
+            <div class="demo__label">Interactive demo</div>
+            <div class="demo__stage">
+              <button class="demo__btn" id="demoBtn">Click me</button>
+              <p class="demo__readout" id="demoReadout">This is a placeholder for your signature interactive piece.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED WORK GRID ============ -->
+    <section class="work" id="work">
+      <div class="section__head">
+        <span class="section__kicker">02 — Other projects</span>
+        <h2 class="section__title">Other Projects</h2>
+      </div>
+
+      <div class="work__grid">
+        <!-- Card template — duplicate this block to add a project -->
+        <article class="card">
+          <header class="card__head">
+            <h3 class="card__title">Project Two</h3>
+            <span class="card__tag">Tag</span>
+          </header>
+          <dl class="paps paps--compact">
+            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
+            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
+            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
+            <div><dt>Result</dt><dd>Placeholder.</dd></div>
+          </dl>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+        </article>
+
+        <article class="card">
+          <header class="card__head">
+            <h3 class="card__title">Project Three</h3>
+            <span class="card__tag">Tag</span>
+          </header>
+          <dl class="paps paps--compact">
+            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
+            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
+            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
+            <div><dt>Result</dt><dd>Placeholder.</dd></div>
+          </dl>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+        </article>
+
+        <article class="card">
+          <header class="card__head">
+            <h3 class="card__title">Project Four</h3>
+            <span class="card__tag">Tag</span>
+          </header>
+          <dl class="paps paps--compact">
+            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
+            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
+            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
+            <div><dt>Result</dt><dd>Placeholder.</dd></div>
+          </dl>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="section__head">
+        <span class="section__kicker">03 — About</span>
+        <h2 class="section__title">About me</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__photo">
+          <div class="about__photoframe" id="headshot">
+            <span>Headshot</span>
+          </div>
+        </div>
+        <div class="about__body">
+          <p>
+            A short, human paragraph about who you are, how you got here, and what you care about.
+            Two or three sentences is plenty. We'll write this together.
+          </p>
+          <p>
+            A second paragraph if you want it — maybe what you're looking for next, or what kind of
+            work you do your best thinking on.
+          </p>
+
+          <h3 class="about__skillshead">Technical tools</h3>
+          <ul class="skills">
+            <li>Python</li>
+            <li>Linux</li>
+            <li>Wireshark</li>
+            <li>Nmap</li>
+            <li>Burp Suite</li>
+            <li>Splunk</li>
+          </ul>
+
+          <h3 class="about__skillshead">Focus areas</h3>
+          <ul class="skills skills--alt">
+            <li>Network security</li>
+            <li>Incident response</li>
+            <li>Threat detection</li>
+            <li>AI for security</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NOW / BUILD LOG ============ -->
+    <section class="now" id="now">
+      <div class="section__head">
+        <span class="section__kicker">04 — Now</span>
+        <h2 class="section__title">Build log</h2>
+      </div>
+
+      <ol class="log">
+        <li class="log__item">
+          <time class="log__date">2026 · placeholder</time>
+          <p class="log__text">What you're working on right now. The newest entry sits at the top.</p>
+        </li>
+        <li class="log__item">
+          <time class="log__date">2026 · placeholder</time>
+          <p class="log__text">A previous milestone or thing you shipped.</p>
+        </li>
+        <li class="log__item">
+          <time class="log__date">2026 · placeholder</time>
+          <p class="log__text">Something from a little while ago.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ WRITING PREVIEWS ============
+         HIDDEN FOR NOW: an empty blog reads as abandoned. When you have 2+ real
+         pieces, just ask me to "turn the writing section back on" and I'll un-hide this.
+    <section class="writing" id="writing">
+      <div class="section__head">
+        <span class="section__kicker">05 — Writing</span>
+        <h2 class="section__title">Things I've been thinking about</h2>
+      </div>
+
+      <div class="writing__list">
+        <a class="post" href="#">
+          <span class="post__date">Placeholder date</span>
+          <h3 class="post__title">An essay title goes here</h3>
+          <p class="post__excerpt">A one or two line preview of the piece, just enough to make someone want to click.</p>
+          <span class="post__more">Read →</span>
+        </a>
+        <a class="post" href="#">
+          <span class="post__date">Placeholder date</span>
+          <h3 class="post__title">A second piece of writing</h3>
+          <p class="post__excerpt">A one or two line preview of the piece, just enough to make someone want to click.</p>
+          <span class="post__more">Read →</span>
+        </a>
+        <a class="post" href="#">
+          <span class="post__date">Placeholder date</span>
+          <h3 class="post__title">A third short post</h3>
+          <p class="post__excerpt">A one or two line preview of the piece, just enough to make someone want to click.</p>
+          <span class="post__more">Read →</span>
+        </a>
+      </div>
+    </section>
+    ============ END WRITING ============ -->
+
+  </main>
+
+  <!-- ============ CONTACT FOOTER ============ -->
+  <footer class="contact" id="contact">
+    <div class="contact__inner">
+      <p class="contact__kicker">Get in touch</p>
+      <h2 class="contact__headline">Let's talk.</h2>
+      <a class="contact__email" href="mailto:kmkolos04@gmail.com">kmkolos04@gmail.com</a>
+      <div class="contact__links">
+        <a href="https://www.linkedin.com/in/KKOLOS" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/KMKolos" target="_blank" rel="noopener">GitHub</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+      <p class="contact__fine">© <span id="year"></span> Kristopher Kolos. Built with Claude Code.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

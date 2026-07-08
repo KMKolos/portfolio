@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const demoReadout = document.getElementById('demoReadout');
   if (demoBtn && demoReadout) {
     const lines = [
-      'This is a placeholder for your signature interactive piece.',
-      'It could be a live calculator, a mini-tool, a visual…',
-      'Whatever best shows off what you do.',
-      'We\'ll build the real one together.'
+      '> signature project loads here — coming soon',
+      '> candidate: phishing red-flag analyzer',
+      '> candidate: password entropy lab',
+      '> status: in the lab. check back.'
     ];
     let i = 0;
     demoBtn.addEventListener('click', () => {

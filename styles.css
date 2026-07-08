@@ -17,6 +17,9 @@
   --espresso:   #271E17;
   --accent:        #7C4F2D; /* legible deep brown — for small labels & UI */
   --accent-bright: #B27A43; /* burnt amber — for headline emphasis & hovers */
+  --navy:          #2A3950; /* slate navy — dark "technical" surfaces */
+  --navy-deep:     #1D2939; /* midnight slate — deepest surface */
+  --slate:         #9AA9BF; /* muted cool text on navy surfaces */
 
   --ink:        var(--espresso);
   --bg:         var(--cream);
@@ -106,12 +109,27 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 }
 
 .nav__brand {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.35rem;
-  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--espresso);
 }
-.nav__dot { color: var(--accent); }
+.nav__mark { width: 24px; height: 24px; flex-shrink: 0; }
+.nav__word {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: 0.34em;
+  display: inline-flex;
+  align-items: baseline;
+}
+.nav__sq {
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  background: var(--accent-bright);
+  margin-left: 0.06em;
+}
 
 .nav__links { display: flex; align-items: center; gap: 1.6rem; }
 .nav__links a {
@@ -133,7 +151,7 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 .nav__links a:not(.nav__cta):hover::after { width: 100%; }
 
 .nav__cta {
-  background: var(--espresso);
+  background: var(--navy-deep);
   color: var(--cream) !important;
   padding: 0.5rem 1.05rem;
   border-radius: 100px;
@@ -180,10 +198,10 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 .hero__headline {
   font-family: var(--serif);
   font-weight: 340;
-  font-size: clamp(2.6rem, 8.2vw, 5.75rem);
-  line-height: 1.0;
-  letter-spacing: -0.028em;
-  max-width: 15ch;
+  font-size: clamp(2.4rem, 7.4vw, 5rem);
+  line-height: 1.04;
+  letter-spacing: -0.026em;
+  max-width: 19ch;
 }
 
 .hero__sub {
@@ -214,9 +232,9 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 }
 .btn:hover { border-color: var(--accent-bright); color: var(--accent-bright); transform: translateY(-2px); }
 .btn--solid {
-  background: var(--espresso);
+  background: var(--navy-deep);
   color: var(--cream);
-  border-color: var(--espresso);
+  border-color: var(--navy-deep);
 }
 .btn--solid:hover { background: var(--accent-bright); border-color: var(--accent-bright); color: var(--cream); }
 .btn--ghost { background: var(--beige); border-color: transparent; }
@@ -272,7 +290,7 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   max-width: var(--maxw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
 }
 .creds__item {
@@ -346,7 +364,7 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 /* Interactive slot */
 .featured__interactive { position: sticky; top: 90px; }
 .demo {
-  background: var(--espresso);
+  background: linear-gradient(165deg, var(--navy), var(--navy-deep));
   color: var(--cream);
   border-radius: var(--radius);
   padding: clamp(1.5rem, 4vw, 2.5rem);
@@ -354,12 +372,24 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   display: flex;
   flex-direction: column;
 }
-.demo__label {
-  font-size: 0.72rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--beige-deep);
+/* Terminal-style header bar */
+.demo__bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-bottom: 0.9rem;
   margin-bottom: auto;
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+}
+.demo__dot { width: 10px; height: 10px; border-radius: 50%; }
+.demo__dot:nth-child(1) { background: var(--accent-bright); }
+.demo__dot:nth-child(2) { background: var(--beige-deep); }
+.demo__dot:nth-child(3) { background: var(--slate); }
+.demo__bar code {
+  margin-left: 8px;
+  font: 500 0.78rem/1 ui-monospace, "Cascadia Code", Consolas, monospace;
+  color: var(--slate);
+  letter-spacing: 0.02em;
 }
 .demo__stage { text-align: center; margin: auto 0; }
 .demo__btn {
@@ -375,7 +405,11 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   transition: transform 0.15s, background 0.2s;
 }
 .demo__btn:hover { transform: scale(1.05); background: var(--beige-deep); color: var(--espresso); }
-.demo__readout { margin-top: 1.4rem; color: var(--grey-soft); font-size: 0.95rem; }
+.demo__readout {
+  margin-top: 1.4rem;
+  color: var(--slate);
+  font: 500 0.9rem/1.6 ui-monospace, "Cascadia Code", Consolas, monospace;
+}
 
 /* ===================================================================
    WORK GRID
@@ -536,7 +570,12 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 /* ===================================================================
    CONTACT FOOTER
    =================================================================== */
-.contact { background: var(--brown-deep); color: var(--cream); text-align: center; }
+.contact {
+  background: linear-gradient(180deg, var(--navy), var(--navy-deep));
+  color: var(--cream);
+  text-align: center;
+  padding: clamp(2.5rem, 6vw, 4rem) var(--pad) clamp(2rem, 5vw, 3rem);
+}
 .contact__inner { max-width: var(--maxw); margin: 0 auto; }
 .contact__kicker {
   font-size: 0.78rem;
@@ -568,12 +607,12 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   gap: 1.8rem;
 }
 .contact__links a {
-  color: var(--grey-soft);
+  color: var(--slate);
   font-weight: 500;
   transition: color 0.2s;
 }
 .contact__links a:hover { color: var(--cream); }
-.contact__fine { font-size: 0.82rem; color: var(--grey); }
+.contact__fine { font-size: 0.82rem; color: color-mix(in srgb, var(--slate) 75%, transparent); }
 
 /* ===================================================================
    RESPONSIVE

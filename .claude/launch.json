@@ -6,6 +6,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "4321"],
       "port": 4321
+    },
+    {
+      "name": "meridian",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", ".claude\\start-meridian.cmd"],
+      "port": 5173
     }
   ]
 }

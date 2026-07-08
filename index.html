@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kristopher Kolos — Cybersecurity</title>
-  <meta name="description" content="Kristopher Kolos — Computer Information Systems student concentrating in cybersecurity, based in New York City. Projects, skills, and build log." />
+  <title>Kris Kolos — Cybersecurity & AI</title>
+  <meta name="description" content="Kris Kolos — Computer Information Systems senior at Baruch College, concentrating in cybersecurity and focused on security × AI. New York City." />
 
   <!-- Favicon (simple KK mark) -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -12,8 +12,8 @@
   <!-- Social preview (shown when the link is shared on LinkedIn, iMessage, Slack, etc.)
        We'll add the preview image (og:image) when the site goes live and has a real web address. -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Kristopher Kolos — Cybersecurity" />
-  <meta property="og:description" content="Computer Information Systems student concentrating in cybersecurity, based in New York City." />
+  <meta property="og:title" content="Kris Kolos — Cybersecurity & AI" />
+  <meta property="og:description" content="Computer Information Systems senior at Baruch College, concentrating in cybersecurity and focused on security × AI. New York City." />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Fonts: Fraunces (characterful serif for headlines) + Hanken Grotesk (warm, refined sans for body) -->
@@ -28,7 +28,14 @@
   <!-- ============ STICKY NAV ============ -->
   <header class="nav" id="top">
     <div class="nav__inner">
-      <a href="#top" class="nav__brand">KK<span class="nav__dot">.</span></a>
+      <a href="#top" class="nav__brand" aria-label="Kris Kolos — back to top">
+        <svg class="nav__mark" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="13" aria-hidden="true">
+          <line x1="48" y1="6" x2="48" y2="90" />
+          <line x1="14" y1="12" x2="82" y2="84" />
+          <line x1="82" y1="12" x2="14" y2="84" />
+        </svg>
+        <span class="nav__word">KRIS<span class="nav__sq"></span></span>
+      </a>
       <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -36,7 +43,7 @@
         <a href="#featured">Featured</a>
         <a href="#work">Projects</a>
         <a href="#about">About</a>
-        <a href="#now">Now</a>
+        <a href="#now">Log</a>
         <a href="#contact" class="nav__cta">Contact</a>
       </nav>
     </div>
@@ -47,14 +54,14 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="hero__inner">
-        <p class="hero__eyebrow">Cybersecurity · New York City</p>
+        <p class="hero__eyebrow">Cybersecurity × AI · New York City</p>
         <h1 class="hero__headline">
-          Cybersecurity student focused on <em>defending the systems</em> people rely on.
+          Studying how to defend systems — and the <em>AI</em> that's starting to run them.
         </h1>
         <p class="hero__sub">
-          I'm Kris Kolos — a Computer Information Systems student in New York City,
-          concentrating in cybersecurity with a minor in information technology. I care about
-          network defense, threat detection, and learning the tools real security teams use every day.
+          I'm Kris Kolos, a cybersecurity-focused Computer Information Systems senior at
+          Baruch College (CUNY) and a former NCAA Division I athlete. I take on ambiguous,
+          unowned problems and drive them to done.
         </p>
         <p class="hero__status"><span class="hero__dot"></span> Open to Fall 2026 security internships</p>
         <div class="hero__links">
@@ -71,20 +78,24 @@
     <section class="creds" aria-label="Credentials at a glance">
       <div class="creds__inner">
         <div class="creds__item">
-          <span class="creds__label">Certifications</span>
-          <span class="creds__value">CompTIA Security+ (in progress) · placeholder</span>
-        </div>
-        <div class="creds__item">
           <span class="creds__label">Education</span>
-          <span class="creds__value">B.S. Computer Information Systems · placeholder</span>
+          <span class="creds__value">BBA, Computer Information Systems — Cybersecurity · Baruch College</span>
         </div>
         <div class="creds__item">
-          <span class="creds__label">Focus</span>
-          <span class="creds__value">Defensive security · SOC · placeholder</span>
+          <span class="creds__label">Certifications</span>
+          <span class="creds__value">Preparing for CompTIA Security+ &amp; CompTIA Network+</span>
         </div>
         <div class="creds__item">
-          <span class="creds__label">Platforms</span>
-          <span class="creds__value">TryHackMe · HackTheBox · placeholder</span>
+          <span class="creds__label">Coursework</span>
+          <span class="creds__value">Cybersecurity · Networking · Databases · SQL · Data Structures · Python · C++</span>
+        </div>
+        <div class="creds__item">
+          <span class="creds__label">Languages</span>
+          <span class="creds__value">English &amp; Russian (fluent) · Spanish (conv.) · Hebrew (elem.)</span>
+        </div>
+        <div class="creds__item">
+          <span class="creds__label">Leadership</span>
+          <span class="creds__value">VP of Programming, Hillel at Baruch · NCAA D1 water polo</span>
         </div>
       </div>
     </section>
@@ -92,7 +103,6 @@
     <!-- ============ FEATURED PROJECT ============ -->
     <section class="featured" id="featured">
       <div class="section__head">
-        <span class="section__kicker">01 — Featured</span>
         <h2 class="section__title">Featured Projects</h2>
       </div>
 
@@ -112,10 +122,13 @@
         <!-- Interactive element slot — we'll replace this with your signature piece -->
         <div class="featured__interactive" id="signature-slot">
           <div class="demo">
-            <div class="demo__label">Interactive demo</div>
+            <div class="demo__bar">
+              <span class="demo__dot"></span><span class="demo__dot"></span><span class="demo__dot"></span>
+              <code>kris@portfolio:~$ demo</code>
+            </div>
             <div class="demo__stage">
-              <button class="demo__btn" id="demoBtn">Click me</button>
-              <p class="demo__readout" id="demoReadout">This is a placeholder for your signature interactive piece.</p>
+              <button class="demo__btn" id="demoBtn">Run</button>
+              <p class="demo__readout" id="demoReadout">&gt; signature project loads here — coming soon</p>
             </div>
           </div>
         </div>
@@ -125,7 +138,6 @@
     <!-- ============ SELECTED WORK GRID ============ -->
     <section class="work" id="work">
       <div class="section__head">
-        <span class="section__kicker">02 — Other projects</span>
         <h2 class="section__title">Other Projects</h2>
       </div>
 
@@ -178,7 +190,6 @@
     <!-- ============ ABOUT ============ -->
     <section class="about" id="about">
       <div class="section__head">
-        <span class="section__kicker">03 — About</span>
         <h2 class="section__title">About me</h2>
       </div>
 
@@ -190,30 +201,50 @@
         </div>
         <div class="about__body">
           <p>
-            A short, human paragraph about who you are, how you got here, and what you care about.
-            Two or three sentences is plenty. We'll write this together.
+            I started in biochemical engineering, then realized I wanted to build things, not sit
+            in a lab. That took me to cybersecurity and software, where I get to pick up an
+            ambiguous problem and push it all the way to something that works. Nine years of
+            competitive water polo, including at the NCAA Division I level, taught me how to keep
+            showing up to hard things.
           </p>
           <p>
-            A second paragraph if you want it — maybe what you're looking for next, or what kind of
-            work you do your best thinking on.
+            I do my best thinking when I own a problem end to end and the stakes are real, not
+            hypothetical. Right now I'm building an agentic SOC alert-triage copilot on the
+            Anthropic API. I'm looking for a spot at a growth-stage security company where I can
+            sit close to actual customer problems and turn them into things that ship.
           </p>
 
-          <h3 class="about__skillshead">Technical tools</h3>
+          <h3 class="about__skillshead">Technical</h3>
           <ul class="skills">
             <li>Python</li>
-            <li>Linux</li>
-            <li>Wireshark</li>
-            <li>Nmap</li>
-            <li>Burp Suite</li>
-            <li>Splunk</li>
+            <li>Node.js</li>
+            <li>Anthropic API and agentic tool design</li>
+            <li>SQL</li>
+            <li>Networking fundamentals</li>
+            <li>CompTIA Security+ (in progress)</li>
+            <li>CompTIA Network+ (in progress)</li>
+            <li>C++</li>
+          </ul>
+
+          <h3 class="about__skillshead">Hands-on labs</h3>
+          <ul class="skills">
+            <li>Infosec networking labs</li>
+            <li>ZyBooks cybersecurity labs</li>
           </ul>
 
           <h3 class="about__skillshead">Focus areas</h3>
           <ul class="skills skills--alt">
-            <li>Network security</li>
-            <li>Incident response</li>
-            <li>Threat detection</li>
-            <li>AI for security</li>
+            <li>Cybersecurity</li>
+            <li>AI × Security</li>
+            <li>Agentic systems and SOC automation</li>
+          </ul>
+
+          <h3 class="about__skillshead">Languages</h3>
+          <ul class="skills skills--alt">
+            <li>English (fluent)</li>
+            <li>Russian (fluent)</li>
+            <li>Spanish (conversational)</li>
+            <li>Hebrew (elementary)</li>
           </ul>
         </div>
       </div>
@@ -222,22 +253,18 @@
     <!-- ============ NOW / BUILD LOG ============ -->
     <section class="now" id="now">
       <div class="section__head">
-        <span class="section__kicker">04 — Now</span>
         <h2 class="section__title">Build log</h2>
       </div>
 
       <ol class="log">
+        <!-- To add an entry: copy a log__item block and paste it at the TOP (newest first) -->
         <li class="log__item">
-          <time class="log__date">2026 · placeholder</time>
-          <p class="log__text">What you're working on right now. The newest entry sits at the top.</p>
+          <time class="log__date">Jul 2026</time>
+          <p class="log__text">Built v1 of my SOC alert-triage copilot: a Node.js CLI on the Anthropic API that runs an agentic loop with five investigation tools and triages synthetic SIEM alerts to a structured verdict. It becomes the featured project here once it ships.</p>
         </li>
         <li class="log__item">
-          <time class="log__date">2026 · placeholder</time>
-          <p class="log__text">A previous milestone or thing you shipped.</p>
-        </li>
-        <li class="log__item">
-          <time class="log__date">2026 · placeholder</time>
-          <p class="log__text">Something from a little while ago.</p>
+          <time class="log__date">Jul 2026</time>
+          <p class="log__text">Built and shipped v1 of this site with Claude Code. Plain HTML, CSS, and JavaScript, no framework. Custom monogram, warm cream and navy design system, terminal-style demo panel. Next: a hands-on security project for the featured slot.</p>
         </li>
       </ol>
     </section>
@@ -247,7 +274,6 @@
          pieces, just ask me to "turn the writing section back on" and I'll un-hide this.
     <section class="writing" id="writing">
       <div class="section__head">
-        <span class="section__kicker">05 — Writing</span>
         <h2 class="section__title">Things I've been thinking about</h2>
       </div>
 

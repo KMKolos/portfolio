@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Kris Kolos</title>
+  <meta name="description" content="Projects by Kris Kolos — cybersecurity and AI, including an agentic SOC alert-triage copilot." />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Projects — Kris Kolos" />
+  <meta property="og:description" content="Cybersecurity and AI projects, including an agentic SOC alert-triage copilot." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ STICKY NAV ============ -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="Kris Kolos — home">
+        <svg class="nav__mark" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-width="13" aria-hidden="true">
+          <line x1="48" y1="6" x2="48" y2="90" />
+          <line x1="14" y1="12" x2="82" y2="84" />
+          <line x1="82" y1="12" x2="14" y2="84" />
+        </svg>
+        <span class="nav__word">KRIS<span class="nav__sq"></span></span>
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__links">
+        <a href="projects.html" class="active">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#now">Log</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="pagehead">
+      <div class="pagehead__inner">
+        <p class="hero__eyebrow">Selected work</p>
+        <h1 class="pagehead__title">Projects</h1>
+        <p class="pagehead__lead">The things I build. This page grows as I ship them.</p>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PROJECT ============ -->
+    <section class="featured" id="featured">
+      <div class="section__head">
+        <h2 class="section__title">Featured Projects</h2>
+      </div>
+
+      <div class="featured__grid">
+        <div class="featured__text">
+          <h3 class="featured__name">Project Name</h3>
+          <p class="featured__tagline">One sentence on why this mattered and what changed because of it.</p>
+          <dl class="paps">
+            <div><dt>Problem</dt><dd>What was broken or missing. Placeholder text.</dd></div>
+            <div><dt>Approach</dt><dd>How you thought about it. Placeholder text.</dd></div>
+            <div><dt>What I built</dt><dd>The actual thing you made. Placeholder text.</dd></div>
+            <div><dt>Result</dt><dd>The outcome, ideally with a number. Placeholder text.</dd></div>
+          </dl>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+        </div>
+
+        <!-- Media slot — a screenshot or short demo of the featured project goes here -->
+        <div class="featured__interactive">
+          <div class="mediaslot">
+            <span class="mediaslot__label">Demo / screenshot</span>
+            <span class="mediaslot__note">Coming soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OTHER PROJECTS GRID ============ -->
+    <section class="work" id="otherwork">
+      <div class="section__head">
+        <h2 class="section__title">Other Projects</h2>
+      </div>
+
+      <div class="work__grid">
+        <!-- Card template — duplicate this block to add a project -->
+        <article class="card">
+          <header class="card__head">
+            <h3 class="card__title">Project Two</h3>
+            <span class="card__tag">Tag</span>
+          </header>
+          <dl class="paps paps--compact">
+            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
+            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
+            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
+            <div><dt>Result</dt><dd>Placeholder.</dd></div>
+          </dl>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+        </article>
+
+        <article class="card">
+          <header class="card__head">
+            <h3 class="card__title">Project Three</h3>
+            <span class="card__tag">Tag</span>
+          </header>
+          <dl class="paps paps--compact">
+            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
+            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
+            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
+            <div><dt>Result</dt><dd>Placeholder.</dd></div>
+          </dl>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+        </article>
+
+        <article class="card">
+          <header class="card__head">
+            <h3 class="card__title">Project Four</h3>
+            <span class="card__tag">Tag</span>
+          </header>
+          <dl class="paps paps--compact">
+            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
+            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
+            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
+            <div><dt>Result</dt><dd>Placeholder.</dd></div>
+          </dl>
+          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ CONTACT FOOTER ============ -->
+  <footer class="contact" id="contact">
+    <div class="contact__inner">
+      <p class="contact__kicker">Get in touch</p>
+      <h2 class="contact__headline">Let's talk.</h2>
+      <a class="contact__email" href="mailto:kmkolos04@gmail.com">kmkolos04@gmail.com</a>
+      <div class="contact__links">
+        <a href="https://www.linkedin.com/in/KKOLOS" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/KMKolos" target="_blank" rel="noopener">GitHub</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+      <p class="contact__fine">© <span id="year"></span> Kristopher Kolos. Built with Claude Code.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

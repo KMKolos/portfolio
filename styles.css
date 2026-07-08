@@ -24,9 +24,10 @@
   --ink:        var(--espresso);
   --bg:         var(--cream);
 
-  /* Type */
+  /* Type — three voices: editorial serif, body sans, "machine" mono */
   --serif: "Fraunces", Georgia, serif;
   --sans:  "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+  --mono:  "IBM Plex Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
 
   /* Layout */
   --maxw: 1120px;
@@ -65,6 +66,13 @@ a { color: inherit; text-decoration: none; }
 
 em { font-style: italic; color: var(--accent-bright); }
 
+/* Accessibility: visible keyboard focus (quality floor) */
+:focus-visible {
+  outline: 2px solid var(--accent-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 /* ---------- Shared section scaffolding ---------- */
 section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 
@@ -86,6 +94,16 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   font-size: clamp(1.9rem, 5vw, 3rem);
   line-height: 1.05;
   letter-spacing: -0.01em;
+}
+/* Signature mark: the logo's amber square, echoed before each section title */
+.section__title::before {
+  content: "";
+  display: inline-block;
+  width: 0.42em;
+  height: 0.42em;
+  background: var(--accent-bright);
+  margin-right: 0.5em;
+  vertical-align: 0.16em;
 }
 
 /* ===================================================================
@@ -149,6 +167,8 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   transition: width 0.25s ease;
 }
 .nav__links a:not(.nav__cta):hover::after { width: 100%; }
+.nav__links a.active { color: var(--espresso); font-weight: 600; }
+.nav__links a.active:not(.nav__cta)::after { width: 100%; }
 
 .nav__cta {
   background: var(--navy-deep);
@@ -187,12 +207,23 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 .hero__inner { max-width: var(--maxw); margin: 0 auto; width: 100%; }
 
 .hero__eyebrow {
-  font-size: 0.85rem;
-  letter-spacing: 0.16em;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--grey);
-  font-weight: 600;
+  color: var(--brown);
+  font-weight: 500;
   margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+.hero__eyebrow::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--accent-bright);
+  flex-shrink: 0;
 }
 
 .hero__headline {
@@ -244,7 +275,8 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  font-size: 0.9rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--brown-deep);
   background: color-mix(in srgb, var(--beige) 70%, transparent);
@@ -269,13 +301,68 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   position: absolute;
   bottom: 2rem; left: 50%;
   transform: translateX(-50%);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--grey);
   animation: bob 2s ease-in-out infinite;
 }
 @keyframes bob { 0%,100%{transform:translate(-50%,0)} 50%{transform:translate(-50%,6px)} }
+
+/* ===================================================================
+   PAGE HEADER (projects.html)
+   =================================================================== */
+.pagehead { padding: clamp(2.5rem, 7vw, 5rem) var(--pad) clamp(1.5rem, 4vw, 2.5rem); }
+.pagehead__inner { max-width: var(--maxw); margin: 0 auto; }
+.pagehead__title {
+  font-family: var(--serif);
+  font-weight: 340;
+  font-size: clamp(2.6rem, 7vw, 4.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.026em;
+}
+.pagehead__lead {
+  margin-top: 1.1rem;
+  color: var(--brown);
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  max-width: 48ch;
+}
+
+/* ===================================================================
+   SELECTED WORK TEASER (home → projects.html)
+   =================================================================== */
+.workcta { background: var(--cream-2); }
+.workcta__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.workcta__lead { margin: 1rem 0 1.8rem; color: var(--brown); font-size: 1.1rem; max-width: 46ch; }
+
+/* Media placeholder for a featured project's screenshot/demo */
+.mediaslot {
+  min-height: 320px;
+  border: 1.5px dashed color-mix(in srgb, var(--brown) 32%, transparent);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--beige) 40%, transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.mediaslot__label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.mediaslot__note { font-family: var(--mono); font-size: 0.72rem; color: var(--grey); }
 
 /* ===================================================================
    CREDENTIALS STRIP
@@ -302,8 +389,9 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 }
 .creds__item:last-child { border-right: 0; }
 .creds__label {
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 600;
@@ -350,12 +438,13 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   padding-left: 1rem;
 }
 .paps dt {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 .paps dd { color: var(--brown-deep); }
 .paps--compact { gap: 0.7rem; }
@@ -387,7 +476,7 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 .demo__dot:nth-child(3) { background: var(--slate); }
 .demo__bar code {
   margin-left: 8px;
-  font: 500 0.78rem/1 ui-monospace, "Cascadia Code", Consolas, monospace;
+  font: 500 0.78rem/1 var(--mono);
   color: var(--slate);
   letter-spacing: 0.02em;
 }
@@ -408,7 +497,7 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 .demo__readout {
   margin-top: 1.4rem;
   color: var(--slate);
-  font: 500 0.9rem/1.6 ui-monospace, "Cascadia Code", Consolas, monospace;
+  font: 500 0.9rem/1.6 var(--mono);
 }
 
 /* ===================================================================
@@ -445,12 +534,13 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   font-size: 1.35rem;
 }
 .card__tag {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--brown);
   background: var(--beige);
-  padding: 0.25rem 0.6rem;
+  padding: 0.28rem 0.6rem;
   border-radius: 100px;
 }
 
@@ -496,7 +586,7 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   border-top: 1px dashed color-mix(in srgb, var(--brown) 22%, transparent);
 }
 .log__item:first-child { border-top: 0; }
-.log__date { font-size: 0.85rem; color: var(--accent); font-weight: 600; letter-spacing: 0.04em; }
+.log__date { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); font-weight: 500; letter-spacing: 0.01em; }
 .log__text { color: var(--brown-deep); }
 
 /* ===================================================================
@@ -541,9 +631,12 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 .about__photoframe img { width: 100%; height: 100%; object-fit: cover; }
 .about__body p { margin-bottom: 1.1rem; font-size: 1.05rem; color: var(--brown-deep); }
 .about__skillshead {
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: 1.15rem;
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
   margin: 1.8rem 0 0.9rem;
 }
 .skills {
@@ -578,11 +671,12 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 }
 .contact__inner { max-width: var(--maxw); margin: 0 auto; }
 .contact__kicker {
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--beige-deep);
-  font-weight: 600;
+  font-weight: 500;
 }
 .contact__headline {
   font-family: var(--serif);
@@ -638,6 +732,7 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
 
   .featured__grid { grid-template-columns: 1fr; }
   .featured__interactive { position: static; }
+  .workcta__inner { grid-template-columns: 1fr; }
   .about__grid { grid-template-columns: 1fr; }
   .about__photo { max-width: 280px; }
 

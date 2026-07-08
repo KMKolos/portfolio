@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const demoReadout = document.getElementById('demoReadout');
   if (demoBtn && demoReadout) {
     const lines = [
-      '> signature project loads here — coming soon',
-      '> candidate: phishing red-flag analyzer',
-      '> candidate: password entropy lab',
-      '> status: in the lab. check back.'
+      '> featured project: SOC alert-triage copilot',
+      '> stack: node.js + anthropic api',
+      '> agentic loop, five investigation tools',
+      '> status: shipping soon. check back.'
     ];
     let i = 0;
     demoBtn.addEventListener('click', () => {

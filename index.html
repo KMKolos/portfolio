@@ -6,7 +6,7 @@
   <title>Kris Kolos — Cybersecurity & AI</title>
   <meta name="description" content="Kris Kolos — Computer Information Systems senior at Baruch College, concentrating in cybersecurity and focused on security × AI. New York City." />
 
-  <!-- Favicon (simple KK mark) -->
+  <!-- Favicon (KK monogram mark) -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Social preview (shown when the link is shared on LinkedIn, iMessage, Slack, etc.)
@@ -16,10 +16,11 @@
   <meta property="og:description" content="Computer Information Systems senior at Baruch College, concentrating in cybersecurity and focused on security × AI. New York City." />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Fonts: Fraunces (characterful serif for headlines) + Hanken Grotesk (warm, refined sans for body) -->
+  <!-- Type system, three voices:
+       Fraunces (editorial serif, headlines) · Hanken Grotesk (body) · IBM Plex Mono (labels/data, the "machine" voice) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -40,8 +41,7 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav__links">
-        <a href="#featured">Featured</a>
-        <a href="#work">Projects</a>
+        <a href="projects.html">Projects</a>
         <a href="#about">About</a>
         <a href="#now">Log</a>
         <a href="#contact" class="nav__cta">Contact</a>
@@ -100,90 +100,30 @@
       </div>
     </section>
 
-    <!-- ============ FEATURED PROJECT ============ -->
-    <section class="featured" id="featured">
-      <div class="section__head">
-        <h2 class="section__title">Featured Projects</h2>
-      </div>
-
-      <div class="featured__grid">
-        <div class="featured__text">
-          <h3 class="featured__name">Project Name</h3>
-          <p class="featured__tagline">One sentence on why this mattered and what changed because of it.</p>
-          <dl class="paps">
-            <div><dt>Problem</dt><dd>What was broken or missing. Placeholder text.</dd></div>
-            <div><dt>Approach</dt><dd>How you thought about it. Placeholder text.</dd></div>
-            <div><dt>What I built</dt><dd>The actual thing you made. Placeholder text.</dd></div>
-            <div><dt>Result</dt><dd>The outcome, ideally with a number. Placeholder text.</dd></div>
-          </dl>
-          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+    <!-- ============ SELECTED WORK (teaser → projects.html) ============ -->
+    <section class="workcta" id="work">
+      <div class="workcta__inner">
+        <div class="workcta__text">
+          <h2 class="section__title">Selected work</h2>
+          <p class="workcta__lead">
+            Right now I'm building an agentic SOC alert-triage copilot on the Anthropic API.
+            More projects land here as I ship them.
+          </p>
+          <a class="btn btn--solid workcta__btn" href="projects.html">View projects →</a>
         </div>
 
-        <!-- Interactive element slot — we'll replace this with your signature piece -->
-        <div class="featured__interactive" id="signature-slot">
+        <div class="workcta__visual">
           <div class="demo">
             <div class="demo__bar">
               <span class="demo__dot"></span><span class="demo__dot"></span><span class="demo__dot"></span>
-              <code>kris@portfolio:~$ demo</code>
+              <code>kris@soc:~$ triage --demo</code>
             </div>
             <div class="demo__stage">
               <button class="demo__btn" id="demoBtn">Run</button>
-              <p class="demo__readout" id="demoReadout">&gt; signature project loads here — coming soon</p>
+              <p class="demo__readout" id="demoReadout">&gt; featured project: SOC alert-triage copilot</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ SELECTED WORK GRID ============ -->
-    <section class="work" id="work">
-      <div class="section__head">
-        <h2 class="section__title">Other Projects</h2>
-      </div>
-
-      <div class="work__grid">
-        <!-- Card template — duplicate this block to add a project -->
-        <article class="card">
-          <header class="card__head">
-            <h3 class="card__title">Project Two</h3>
-            <span class="card__tag">Tag</span>
-          </header>
-          <dl class="paps paps--compact">
-            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
-            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
-            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
-            <div><dt>Result</dt><dd>Placeholder.</dd></div>
-          </dl>
-          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
-        </article>
-
-        <article class="card">
-          <header class="card__head">
-            <h3 class="card__title">Project Three</h3>
-            <span class="card__tag">Tag</span>
-          </header>
-          <dl class="paps paps--compact">
-            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
-            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
-            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
-            <div><dt>Result</dt><dd>Placeholder.</dd></div>
-          </dl>
-          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
-        </article>
-
-        <article class="card">
-          <header class="card__head">
-            <h3 class="card__title">Project Four</h3>
-            <span class="card__tag">Tag</span>
-          </header>
-          <dl class="paps paps--compact">
-            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
-            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
-            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
-            <div><dt>Result</dt><dd>Placeholder.</dd></div>
-          </dl>
-          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
-        </article>
       </div>
     </section>
 

@@ -204,7 +204,17 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   position: relative;
   padding-top: clamp(2rem, 6vw, 4rem);
 }
-.hero__inner { max-width: var(--maxw); margin: 0 auto; width: 100%; }
+.hero__grid {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+.hero__inner { width: 100%; }
+.hero__visual { width: 100%; }
 
 .hero__eyebrow {
   font-family: var(--mono);
@@ -333,15 +343,8 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
    SELECTED WORK TEASER (home → projects.html)
    =================================================================== */
 .workcta { background: var(--cream-2); }
-.workcta__inner {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
-}
-.workcta__lead { margin: 1rem 0 1.8rem; color: var(--brown); font-size: 1.1rem; max-width: 46ch; }
+.workcta__inner { max-width: var(--maxw); margin: 0 auto; }
+.workcta__lead { margin: 1rem 0 1.8rem; color: var(--brown); font-size: 1.1rem; max-width: 60ch; }
 
 /* Media placeholder for a featured project's screenshot/demo */
 .mediaslot {
@@ -363,6 +366,21 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   color: var(--accent);
 }
 .mediaslot__note { font-family: var(--mono); font-size: 0.72rem; color: var(--grey); }
+/* Live-demo variant: the dashed placeholder becomes a solid frame holding the
+   self-contained SOC replay (soc-demo.html) in an iframe. */
+.mediaslot--live {
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--navy) 55%, transparent);
+  background: var(--navy-deep);
+  overflow: hidden;
+  min-height: 0;
+}
+.mediaslot--live iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
+}
 
 /* ===================================================================
    CREDENTIALS STRIP
@@ -542,6 +560,31 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   background: var(--beige);
   padding: 0.28rem 0.6rem;
   border-radius: 100px;
+}
+
+/* Single centered "Next Project" placeholder slot */
+.work__grid--single { display: flex; justify-content: center; }
+.card--next {
+  max-width: 400px;
+  width: 100%;
+  min-height: 190px;
+  background: transparent;
+  border: 1.5px dashed color-mix(in srgb, var(--brown) 32%, transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+.card--next:hover { transform: none; box-shadow: none; border-color: var(--beige-deep); }
+.card--next .card__title { color: var(--brown); }
+.card__next-note {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey);
 }
 
 /* ===================================================================
@@ -730,9 +773,12 @@ section, .colophon { padding: clamp(3.5rem, 9vw, 7rem) var(--pad); }
   .nav__links a { width: 100%; padding: 0.7rem 0; }
   .nav__cta { margin-top: 0.5rem; }
 
+  .hero { min-height: auto; }
+  .hero__grid { grid-template-columns: 1fr; gap: 2.2rem; }
+  .hero__scroll { display: none; }
+
   .featured__grid { grid-template-columns: 1fr; }
   .featured__interactive { position: static; }
-  .workcta__inner { grid-template-columns: 1fr; }
   .about__grid { grid-template-columns: 1fr; }
   .about__photo { max-width: 280px; }
 

@@ -49,16 +49,14 @@
     <!-- ============ PAGE HEADER ============ -->
     <section class="pagehead">
       <div class="pagehead__inner">
-        <p class="hero__eyebrow">Selected work</p>
         <h1 class="pagehead__title">Projects</h1>
-        <p class="pagehead__lead">The things I build. This page grows as I ship them.</p>
       </div>
     </section>
 
     <!-- ============ FEATURED PROJECT ============ -->
     <section class="featured" id="featured">
       <div class="section__head">
-        <h2 class="section__title">Featured Projects</h2>
+        <h2 class="section__title">Featured Project</h2>
       </div>
 
       <div class="featured__grid">
@@ -71,14 +69,13 @@
             <div><dt>What I built</dt><dd>The actual thing you made. Placeholder text.</dd></div>
             <div><dt>Result</dt><dd>The outcome, ideally with a number. Placeholder text.</dd></div>
           </dl>
-          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+          <a class="proj-link" href="https://github.com/KMKolos/alert-triage-copilot" target="_blank" rel="noopener">View project / code →</a>
         </div>
 
-        <!-- Media slot — a screenshot or short demo of the featured project goes here -->
+        <!-- Live demo: self-contained replay of recorded copilot investigations -->
         <div class="featured__interactive">
-          <div class="mediaslot">
-            <span class="mediaslot__label">Demo / screenshot</span>
-            <span class="mediaslot__note">Coming soon</span>
+          <div class="mediaslot mediaslot--live">
+            <iframe src="soc-demo.html" title="Live demo: SOC alert-triage copilot replaying recorded investigations" loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -90,48 +87,11 @@
         <h2 class="section__title">Other Projects</h2>
       </div>
 
-      <div class="work__grid">
-        <!-- Card template — duplicate this block to add a project -->
-        <article class="card">
-          <header class="card__head">
-            <h3 class="card__title">Project Two</h3>
-            <span class="card__tag">Tag</span>
-          </header>
-          <dl class="paps paps--compact">
-            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
-            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
-            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
-            <div><dt>Result</dt><dd>Placeholder.</dd></div>
-          </dl>
-          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
-        </article>
-
-        <article class="card">
-          <header class="card__head">
-            <h3 class="card__title">Project Three</h3>
-            <span class="card__tag">Tag</span>
-          </header>
-          <dl class="paps paps--compact">
-            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
-            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
-            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
-            <div><dt>Result</dt><dd>Placeholder.</dd></div>
-          </dl>
-          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
-        </article>
-
-        <article class="card">
-          <header class="card__head">
-            <h3 class="card__title">Project Four</h3>
-            <span class="card__tag">Tag</span>
-          </header>
-          <dl class="paps paps--compact">
-            <div><dt>Problem</dt><dd>Placeholder.</dd></div>
-            <div><dt>Approach</dt><dd>Placeholder.</dd></div>
-            <div><dt>What I built</dt><dd>Placeholder.</dd></div>
-            <div><dt>Result</dt><dd>Placeholder.</dd></div>
-          </dl>
-          <a class="proj-link" href="#" target="_blank" rel="noopener">View project / code →</a>
+      <!-- Single placeholder slot for now; add real cards here later (each: card w/ head + paps) -->
+      <div class="work__grid work__grid--single">
+        <article class="card card--next">
+          <h3 class="card__title">Next Project</h3>
+          <span class="card__next-note">Coming soon</span>
         </article>
       </div>
     </section>
@@ -147,7 +107,7 @@
       <div class="contact__links">
         <a href="https://www.linkedin.com/in/KKOLOS" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/KMKolos" target="_blank" rel="noopener">GitHub</a>
-        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="resume.pdf?v=2" target="_blank" rel="noopener">Resume</a>
       </div>
       <p class="contact__fine">© <span id="year"></span> Kristopher Kolos. Built with Claude Code.</p>
     </div>

@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
 
@@ -61,13 +61,13 @@
 
       <div class="featured__grid">
         <div class="featured__text">
-          <h3 class="featured__name">Project Name</h3>
-          <p class="featured__tagline">One sentence on why this mattered and what changed because of it.</p>
+          <h3 class="featured__name">SOC Alert-Triage Copilot</h3>
+          <p class="featured__tagline">An AI agent that investigates security alerts like a junior analyst, and shows its work.</p>
           <dl class="paps">
-            <div><dt>Problem</dt><dd>What was broken or missing. Placeholder text.</dd></div>
-            <div><dt>Approach</dt><dd>How you thought about it. Placeholder text.</dd></div>
-            <div><dt>What I built</dt><dd>The actual thing you made. Placeholder text.</dd></div>
-            <div><dt>Result</dt><dd>The outcome, ideally with a number. Placeholder text.</dd></div>
+            <div><dt>Problem</dt><dd>Security teams get far more alerts than they can work by hand, and most turn out to be false positives. Triaging each one is slow, repetitive, and easy to get wrong when the volume is high.</dd></div>
+            <div><dt>Approach</dt><dd>I built an agent that works an alert the way a junior analyst would: it gathers evidence from several sources, reasons over what it finds, and commits to a verdict, while keeping the full evidence trail visible so a human can check the call.</dd></div>
+            <div><dt>What I built</dt><dd>A Node.js command-line tool on the Anthropic API. A five-tool agent looks up IP reputation, maps activity to MITRE ATT&amp;CK, correlates related alerts, and pulls user context, then a forced submit_verdict step returns clean, machine-readable output. It runs a single alert or a whole queue, and a browser dashboard replays the queue as a live shift report.</dd></div>
+            <div><dt>Result</dt><dd>It triages a 20-alert synthetic SIEM dataset into structured verdicts, each backed by its own evidence trail, at about four cents per alert. When a case is genuinely ambiguous, it escalates to human review instead of forcing a confident answer it cannot support.</dd></div>
           </dl>
           <a class="proj-link" href="https://github.com/KMKolos/alert-triage-copilot" target="_blank" rel="noopener">View project / code →</a>
         </div>

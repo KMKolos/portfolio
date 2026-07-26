@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 <body>
 
@@ -51,24 +51,39 @@
 
   <main>
 
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO (two columns: pitch + live terminal) ============ -->
     <section class="hero">
-      <div class="hero__inner">
-        <p class="hero__eyebrow">Cybersecurity × AI · New York City</p>
-        <h1 class="hero__headline">
-          Studying how to defend systems — and the <em>AI</em> that's starting to run them.
-        </h1>
-        <p class="hero__sub">
-          I'm Kris Kolos, a cybersecurity-focused Computer Information Systems senior at
-          Baruch College (CUNY) and a former NCAA Division I athlete. I take on ambiguous,
-          unowned problems and drive them to done.
-        </p>
-        <p class="hero__status"><span class="hero__dot"></span> Open to Fall 2026 security internships</p>
-        <div class="hero__links">
-          <a class="btn btn--solid" href="https://www.linkedin.com/in/KKOLOS" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/KMKolos" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="mailto:kmkolos04@gmail.com">Email</a>
-          <a class="btn btn--ghost" href="resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+      <div class="hero__grid">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Cybersecurity × AI · New York City</p>
+          <h1 class="hero__headline">
+            Where security engineering meets the <em>customer</em>.
+          </h1>
+          <p class="hero__sub">
+            I'm Kris Kolos, a cybersecurity-focused Computer Information Systems senior at
+            Baruch College (CUNY) and a former NCAA Division I athlete. I take on ambiguous,
+            unowned problems and drive them to done.
+          </p>
+          <p class="hero__status"><span class="hero__dot"></span> Open to Fall 2026 security internships</p>
+          <div class="hero__links">
+            <a class="btn btn--solid" href="https://www.linkedin.com/in/KKOLOS" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/KMKolos" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="mailto:kmkolos04@gmail.com">Email</a>
+            <a class="btn btn--ghost" href="resume.pdf?v=2" target="_blank" rel="noopener">Resume ↓</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="demo">
+            <div class="demo__bar">
+              <span class="demo__dot"></span><span class="demo__dot"></span><span class="demo__dot"></span>
+              <code>kris@soc:~$ triage --demo</code>
+            </div>
+            <div class="demo__stage demo__stage--teaser">
+              <p class="demo__readout">&gt; SOC alert-triage copilot</p>
+              <a class="demo__btn demo__cta" href="projects.html#featured">See the live demo →</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="hero__scroll">Scroll</div>
@@ -103,27 +118,12 @@
     <!-- ============ SELECTED WORK (teaser → projects.html) ============ -->
     <section class="workcta" id="work">
       <div class="workcta__inner">
-        <div class="workcta__text">
-          <h2 class="section__title">Selected work</h2>
-          <p class="workcta__lead">
-            Right now I'm building an agentic SOC alert-triage copilot on the Anthropic API.
-            More projects land here as I ship them.
-          </p>
-          <a class="btn btn--solid workcta__btn" href="projects.html">View projects →</a>
-        </div>
-
-        <div class="workcta__visual">
-          <div class="demo">
-            <div class="demo__bar">
-              <span class="demo__dot"></span><span class="demo__dot"></span><span class="demo__dot"></span>
-              <code>kris@soc:~$ triage --demo</code>
-            </div>
-            <div class="demo__stage">
-              <button class="demo__btn" id="demoBtn">Run</button>
-              <p class="demo__readout" id="demoReadout">&gt; featured project: SOC alert-triage copilot</p>
-            </div>
-          </div>
-        </div>
+        <h2 class="section__title">Selected work</h2>
+        <p class="workcta__lead">
+          Right now I'm building an agentic SOC alert-triage copilot on the Anthropic API.
+          More projects land here as I ship them.
+        </p>
+        <a class="btn btn--solid workcta__btn" href="projects.html">View projects →</a>
       </div>
     </section>
 
@@ -136,7 +136,7 @@
       <div class="about__grid">
         <div class="about__photo">
           <div class="about__photoframe" id="headshot">
-            <span>Headshot</span>
+            <img src="headshot.jpg?v=1" alt="Kris Kolos" />
           </div>
         </div>
         <div class="about__body">
@@ -148,28 +148,34 @@
             showing up to hard things.
           </p>
           <p>
-            I do my best thinking when I own a problem end to end and the stakes are real, not
-            hypothetical. Right now I'm building an agentic SOC alert-triage copilot on the
-            Anthropic API. I'm looking for a spot at a growth-stage security company where I can
-            sit close to actual customer problems and turn them into things that ship.
+            I work best when I own a problem end to end and the stakes are real. On the business
+            side, that meant running a partnership pipeline for a startup in Tel Aviv. On the
+            technical side, it means building an agentic SOC alert-triage copilot on the Anthropic
+            API. I am looking for a Solutions or Product role at a growth-stage, AI-native security
+            company where I can stay close to customer problems and turn them into software that ships.
           </p>
 
           <h3 class="about__skillshead">Technical</h3>
           <ul class="skills">
             <li>Python</li>
+            <li>JavaScript</li>
             <li>Node.js</li>
             <li>Anthropic API and agentic tool design</li>
             <li>SQL</li>
-            <li>Networking fundamentals</li>
+            <li>Git</li>
+            <li>REST APIs</li>
+            <li>C++</li>
             <li>CompTIA Security+ (in progress)</li>
             <li>CompTIA Network+ (in progress)</li>
-            <li>C++</li>
           </ul>
 
-          <h3 class="about__skillshead">Hands-on labs</h3>
+          <h3 class="about__skillshead">Security</h3>
           <ul class="skills">
-            <li>Infosec networking labs</li>
-            <li>ZyBooks cybersecurity labs</li>
+            <li>SIEM alert triage</li>
+            <li>MITRE ATT&amp;CK</li>
+            <li>SOC investigation workflows</li>
+            <li>IP reputation &amp; threat enrichment</li>
+            <li>Network fundamentals</li>
           </ul>
 
           <h3 class="about__skillshead">Focus areas</h3>
@@ -198,6 +204,10 @@
 
       <ol class="log">
         <!-- To add an entry: copy a log__item block and paste it at the TOP (newest first) -->
+        <li class="log__item">
+          <time class="log__date">Jul 2026</time>
+          <p class="log__text">Grew the SOC alert-triage copilot from single-alert to full-queue mode: it now triages a whole batch of alerts in one run, each with its own evidence trail and verdict. Built a browser dashboard that replays the queue as a live "shift report," with an economics view and sorting, plus a cost analysis (about 4 cents per alert) and a written failure review of a case it first got wrong, then fixed. Next: a final polish pass, then the repo goes public.</p>
+        </li>
         <li class="log__item">
           <time class="log__date">Jul 2026</time>
           <p class="log__text">Built v1 of my SOC alert-triage copilot: a Node.js CLI on the Anthropic API that runs an agentic loop with five investigation tools and triages synthetic SIEM alerts to a structured verdict. It becomes the featured project here once it ships.</p>
@@ -251,7 +261,7 @@
       <div class="contact__links">
         <a href="https://www.linkedin.com/in/KKOLOS" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/KMKolos" target="_blank" rel="noopener">GitHub</a>
-        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="resume.pdf?v=2" target="_blank" rel="noopener">Resume</a>
       </div>
       <p class="contact__fine">© <span id="year"></span> Kristopher Kolos. Built with Claude Code.</p>
     </div>

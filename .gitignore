@@ -1,0 +1,5 @@
+# Not part of the deployed portfolio
+site/
+graphify-out/
+node_modules/
+.DS_Store
